@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Enhanced Higher Lower</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Higher - Lower</h1>
+
+        <! Add a prompt for the guess. We will change this later>
+        <div  id="guessPrompt" class="hide">
+            <p>Guess a number between 1 and 20</p>
+        </div>
+
+        <!Add buttons for Heads and tails> 
+        <form class = "form">
+            <div class="form-group">
+                <label for="guessInput" class="form-label">Your guess:</label>
+                <input type="text" name="guessInput" id="guessInput" class="form-control form-control-sm" onkeydown=doReturnKey(event)></input>
+            </div>            
+            <! Add the Guess button and click handler>
+            <button type="button" id="guess" class="btn btn-primary btn-lg" onclick=doGuessClick()>Guess</button>
+         </form>
+
+
+         <!Add text elements to display the results. Make them hidden for now.>
+        <div id="results" class = "results hide" >
+            <p>You got it!</p>
+        </div>
+
+    </div>
+    <script src="scripts/funcs.js"></script>
+    <script src="scripts/actions.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
