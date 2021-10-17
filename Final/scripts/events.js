@@ -3,13 +3,13 @@
 // * Validate the value
 // * Pass to display the results if valid
 //  return: none
-var doGuessClick = function () {
+function doGuessClick() {
     let guess = document.getElementById('guessInput').value;
     guess = Number(guess);
 
-    if(validateGuess(guess)) {
+    if (validateGuess(guess)) {
         // Send validated guess to check and display results
-        displayResults(guess, randomNumber);      
+        displayResults(guess, randomNumber);
     }
 
 }
