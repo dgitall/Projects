@@ -87,7 +87,8 @@ function displayResults(guess, randomNumber) {
     let textResult = document.createElement("p");
     if (guess == randomNumber) {
         guesses.push(guess);
-        textResult.innerHTML = `<b>You got it! It took you ${guesses.length} tries and your guesses were ${guesses}.</b>
+        textResult.innerHTML = `<b>You got it! It took you ${guesses.length} tries and 
+        your guesses were ${guesses}.</b>
         <p>Refresh page to play again</p>`;
     }
     else if (guess < randomNumber) {
